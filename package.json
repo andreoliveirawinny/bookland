@@ -1,0 +1,49 @@
+{
+  "name": "bookland",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fluentui/react": "^7.149.2",
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@reduxjs/toolkit": "^1.1.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@uifabric/react-cards": "^0.114.6",
+    "basscss": "^8.1.0",
+    "clsx": "^1.1.1",
+    "goodreads-api-node": "^0.0.12",
+    "lodash": "^4.17.15",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.28",
+    "react": "^16.13.1",
+    "react-autosuggest": "^10.0.2",
+    "react-dom": "^16.13.1",
+    "react-lazyload": "^3.0.0",
+    "react-redux": "^7.1.3",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
