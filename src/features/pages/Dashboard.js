@@ -39,12 +39,13 @@ export default function Appp() {
     })();
   };
 
+  // component did mount
   React.useEffect(fetchBooks, []);
 
   const onDeleteBook = React.useCallback(() => fetchBooks({ ignoreLoading: true }), []);
 
-  const outNow = filter(sortedFullBooks, ({ publishedDate }) => moment(publishedDate).isBetween(moment().subtract(3, 'd'), moment()));
-  const coming = filter(sortedFullBooks, ({ publishedDate }) => moment(publishedDate).isBetween(moment(), moment().add(60, 'd')));
+  const outNow = filter(sortedFullBooks, ({ publishedDate }) => moment(publishedDate).isBetween(moment().subtract(7, 'd'), moment()));
+  const coming = filter(sortedFullBooks, ({ publishedDate }) => moment(publishedDate).isBetween(moment(), moment().add(180, 'd')));
 
   return (
     <div>
@@ -60,7 +61,7 @@ export default function Appp() {
 
             {!isEmpty(outNow) &&
               <Grid className="pb3" container spacing={2}>
-                <Header text="Out now" />
+                <Header text="Just came out" />
                 
                 {map(
                   outNow,

@@ -11,6 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Menu from './components/menus/Menu'
 import { toggleMobileOpen, selectMenu } from './components/menus/menuSlicer';
 import Dashboard from './pages/Dashboard';
+import Calendar from './pages/calendar/calendar';
 
 const drawerWidth = 240;
 
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 const PAGES = {
   DASHBOARD: () => <Dashboard />,
-  CALENDAR: () => <p>CALENDAR</p>,
+  CALENDAR: () => <Calendar />,
   BOOKS: () => <p>BOOKS</p>,
 };
 

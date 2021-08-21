@@ -8,7 +8,7 @@ export const menuSlice = createSlice({
   },
   reducers: {
     setPage: (state, { payload: page }) => {
-      console.log('WHAT')
+      console.log('setPage', page);
       state.page = page;
     },
     toggleMobileOpen: state => {

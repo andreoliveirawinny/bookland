@@ -9,7 +9,9 @@ const cors = require('cors');
 // Mongo DB
 const mongoDB = 'mongodb+srv://admin:a964882209+A@booklandcluster.aqngi.mongodb.net/books?retryWrites=true&w=majority';
 
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
+  .catch(error => console.log('Mongoose Connect Error: ', error));
+  
 mongoose.Promise = global.Promise;
 
 const db = mongoose.connection;

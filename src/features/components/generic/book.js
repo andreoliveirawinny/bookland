@@ -72,7 +72,7 @@ export default function Book({
 
   return (
     <React.Fragment>
-      <Card className={classes.root}>
+      <Card className={classes.root} style={{ width: '30em' }}>
 
         <Spinner loading={deleting}/>
 
@@ -86,33 +86,34 @@ export default function Book({
         <div className={classes.details}>
           <CardContent className={classes.content} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <div>
-              <Text key={id} nowrap block>
-                {title}
+              <div>
+                <Text key={id} nowrap block>
+                  {title}
+                </Text>
+                <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
+                  {author}
+                </Text>
+                <hr />
+              </div>
+              <div>
+                <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
+                  Pages: {pageCount}
+                </Text>
+                <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
+                  Publisher: {publisher}
+                </Text>
+                <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
+                  ISBN: {ISBN_10}
+                </Text>
+
+                <hr />
+              </div>
+
+              <Text className="center" style={subTitleColor} key={id} nowrap block variant="large">
+                {publishedDate}
               </Text>
-              <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
-                {author}
-              </Text>
-              <hr />
             </div>
-            <div>
-              <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
-                Pages: {pageCount}
-              </Text>
-              <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
-                Publisher: {publisher}
-              </Text>
-              <Text style={subTitleColor} key={id} nowrap block variant="smallPlus">
-                ISBN: {ISBN_10}
-              </Text>
 
-              <hr />
-            </div>
-
-            <Text className="center" style={subTitleColor} key={id} nowrap block variant="large">
-              {publishedDate}
-            </Text>
-
-            
             <div className="flex justify-between">
               <DeleteIcon className="pointer" color="primary" onClick={deleteBook} />
               <VisibilityIcon className="pointer" color="primary" />

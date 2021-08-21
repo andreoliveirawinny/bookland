@@ -10,7 +10,10 @@ const BookSchema = mongoose.Schema({
   publisher: String,
   pageCount: Number,
   ISBN_13: String,
-  ISBN_10: String
+  ISBN_10: String,
+  publishedDateYear: String,
+  publishedDateMonth: String,
+  publishedDateDay: String
 }, { timestamps: true });
 
 const Book = mongoose.model('Book', BookSchema);
